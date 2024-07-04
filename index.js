@@ -22,7 +22,7 @@ app.use(("/api/post"),postRouter);
 
 app.use(errorMiddleware);
 
-const PORT = 5000;
+const PORT =process.env.PORT || 5000;
 
 connectdb().then(() => {
   app.listen(PORT, () => {
